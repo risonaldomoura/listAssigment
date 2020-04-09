@@ -25,10 +25,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
     private RecyclerView recyclerView;
     private TarefaAdapter tarefaAdapter;
     private List<Tarefa> listaTarefas = new ArrayList<>();
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), AdicionarTarefaActivity.class);
                 startActivity(intent);
             }
-
-            public void carregarListaTarefas () {
+            public void carregarListaTarefas() {
 
                 Tarefa tarefa1 = new Tarefa();
                 tarefa1.setNomeTarefa("Ir ao mercado");
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 recyclerView.setAdapter(tarefaAdapter);
 
             }
+
 
 
         });
